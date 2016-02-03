@@ -16,14 +16,13 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (lastToggle != reSpawn) {
+		if (Input.GetButton ("Respawn")) {
 			ReSpawn ();
-			reSpawn = false;
+			Debug.Log ("respawn");
+			
+		} else {
+			
 		}
-		else {
-			lastToggle = reSpawn;
-		}
-	
 	}
 	
 	private void ReSpawn() {
